@@ -1,7 +1,13 @@
+import Footer from "../components/Footer";
+import MainPage from "../components/Main";
+import Navbar from "../components/Navbar";
+
 function Home() {
   return (
     <div className="App">
-      <p>Hi</p>
+      <Navbar />
+      <MainPage />
+      <Footer />
     </div>
   );
 }
