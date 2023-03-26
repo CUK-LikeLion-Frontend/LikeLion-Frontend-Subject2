@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import albums from "../hooks/components/Albums/hook";
+import albums from "../../hooks/components/Albums/hook";
 
 const Albums = () => {
   return (

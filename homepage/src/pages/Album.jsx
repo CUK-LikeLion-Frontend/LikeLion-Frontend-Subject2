@@ -1,4 +1,4 @@
-import Albums from "../components/Albums";
+import Albums from "../components/Album/Albums";
 import Footer from "../components/Layout/Footer";
 import Navbar from "../components/Layout/Navbar";
 

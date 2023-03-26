@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Row, Col, Button } from "react-bootstrap";
-import albums from "../hooks/components/Albums/hook";
-import SaleAlert from "../utils/saleAlert";
+import albums from "../../hooks/components/Albums/hook";
+import SaleAlert from "../../utils/saleAlert";
 
 function AlbumDetail() {
   const { title } = useParams();

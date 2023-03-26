@@ -1,6 +1,6 @@
 import Footer from "../components/Layout/Footer";
 import Navbar from "../components/Layout/Navbar";
-import AlbumDetail from "../components/AlbumsDetail";
+import AlbumDetail from "../components/Album/AlbumsDetail";
 
 function AlbumsDetailPage() {
   return (
