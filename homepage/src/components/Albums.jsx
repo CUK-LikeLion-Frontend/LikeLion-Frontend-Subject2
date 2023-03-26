@@ -1,37 +1,26 @@
-import Lilac from "../assets/Lilac.jpg";
-import LovePoem from "../assets/LovePoem.jpg";
-import Palette from "../assets/Palette.jpg";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import albums from "../hooks/components/Albums/hook";
 
 const Albums = () => {
   return (
     <Container fluid>
       <Row className="justify-content-center">
-        <Col md={3}>
-          <img src={Lilac} alt="mainImg" className="img-fluid pt-5 mx-auto " />
-          <div className="d-flex flex-column justify-content-start text-start">
-            <h3>Lilac</h3>
-            <p>The 5th Mini Album</p>
-          </div>
-        </Col>
-        <Col md={3}>
-          <img
-            src={LovePoem}
-            alt="mainImg"
-            className="img-fluid pt-5 mx-auto "
-          />
-          <div className="d-flex flex-column justify-content-start text-start">
-            <h3>LovePoem</h3>
-            <p>The 5th Album</p>
-          </div>
-        </Col>
-        <Col md={3}>
-          <img src={Palette} alt="mainImg" className="img-fluid pt-5 mx-auto" />
-          <div className="d-flex flex-column justify-content-start text-start">
-            <h3>Palette</h3>
-            <p>The 4th Album</p>
-          </div>
-        </Col>
+        {albums.map((album) => (
+          <Col md={3}>
+            <Link to={`/albums/${album.title}`}>
+              <img
+                src={album.image}
+                alt={album.title}
+                className="img-fluid pt-5 mx-auto "
+              />
+            </Link>
+            <div className="d-flex flex-column justify-content-start text-start">
+              <h3>{album.title}</h3>
+              <p>{album.description}</p>
+            </div>
+          </Col>
+        ))}
       </Row>
     </Container>
   );
