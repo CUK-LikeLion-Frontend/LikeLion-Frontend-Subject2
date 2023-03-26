@@ -5,22 +5,24 @@ import albums from "../hooks/components/Albums/hook";
 import SaleAlert from "../utils/saleAlert";
 
 function AlbumDetail() {
-  const [showDiscount, setShowDiscount] = useState(true);
   const { title } = useParams();
   const album = albums.find((album) => album.title === title);
+  const [showDiscount, setShowDiscount] = useState(true);
+  const [time, setTime] = useState(3);
+  const [discount, setDiscount] = useState(30);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowDiscount(false);
-    }, 3000);
+    }, time * 1000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [time]);
 
-  const price = showDiscount ? album.price * 0.7 : album.price;
+  const price = showDiscount ? album.price * (1 - discount / 100) : album.price;
 
   return (
     <div className="container">
-      <SaleAlert time={3} discount={30} />
+      <SaleAlert time={time} discount={discount} alert={showDiscount} />
       <Row className="my-5">
         <Col
           xs={12}

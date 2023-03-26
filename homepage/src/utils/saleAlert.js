@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Alert } from "react-bootstrap";
 
 function SaleAlert({ time, discount }) {
   const [alert, setAlert] = useState(true);
@@ -6,18 +7,18 @@ function SaleAlert({ time, discount }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAlert(false);
-    }, 3000);
+    }, time * 1000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [time]);
 
   return (
     <>
       {alert && (
-        <div className="my-alert2 bg-warning">
-          <p>
+        <Alert variant="warning" className="my-3">
+          <p className="m-0">
             {time}초동안 {discount}프로 할인
           </p>
-        </div>
+        </Alert>
       )}
     </>
   );
