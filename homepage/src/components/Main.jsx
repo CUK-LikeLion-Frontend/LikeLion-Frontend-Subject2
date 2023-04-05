@@ -9,7 +9,7 @@ const MainPage = () => {
           <img
             src={MainImg}
             alt="mainImg"
-            className="img-fluid py-5 w-100 px-5"
+            className="img-fluid py-5 w-10 px-5"
           />
         </Col>
       </Row>

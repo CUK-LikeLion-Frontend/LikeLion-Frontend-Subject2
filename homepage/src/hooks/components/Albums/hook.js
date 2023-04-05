@@ -1,25 +1,25 @@
-import Lilac from "../../../assets/Lilac.jpg";
-import LovePoem from "../../../assets/LovePoem.jpg";
-import Palette from "../../../assets/Palette.jpg";
+import Normal from "../../../assets/normal.jpg";
+import Glasses from "../../../assets/glasses.jpg";
+import Lion from "../../../assets/lion.jpg";
 
 const useAlbumsDetail = [
   {
-    title: "Lilac",
-    image: Lilac,
-    description: "The 5th Mini Album",
+    title: "normal",
+    image: Normal,
+    description: "개발진스",
     price: 20000,
   },
   {
-    title: "LovePoem",
-    image: LovePoem,
-    description: "The 5th Album",
-    price: 20000,
+    title: "Glasses",
+    image: Glasses,
+    description: "뉴진스",
+    price: 22000,
   },
   {
-    title: "Palette",
-    image: Palette,
-    description: "The 4th Album",
-    price: 20000,
+    title: "Lion",
+    image: Lion,
+    description: "New Jeans",
+    price: 24000,
   },
 ];
 
