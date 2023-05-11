@@ -1,9 +1,7 @@
 .main-bg {
-  content: url("../img/banner.jpg");
   width: 100%;
-  display: block;
-  margin: auto;
   padding-top: 5vh;
+  display: flex;
 }
 .wrapper {
   display: flex;
@@ -14,8 +12,7 @@
 
 .contentWrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-direction: column;
 }
 
