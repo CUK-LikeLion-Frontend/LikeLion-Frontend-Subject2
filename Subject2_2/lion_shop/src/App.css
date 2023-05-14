@@ -1,0 +1,17 @@
+.main-bg{
+    height: 600px;
+    background-image: url(./images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+  }
+  .albums{
+    margin-left: 70px;
+    margin-top: 80px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .albums img{
+    border-radius: 10px;
+  }
