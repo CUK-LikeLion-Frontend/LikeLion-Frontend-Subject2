@@ -3,6 +3,7 @@ import Footer from "../Footer/Footer";
 import Main from "../pages/Main";
 import Header from "../Header/Header";
 import Albums from "../pages/Albums";
+import Detail from "../pages/Detail";
 
 const Router = () => {
   return (
@@ -11,6 +12,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/albums" element={<Albums />} />
+        <Route path="/:id" element={<Detail />} />
       </Routes>
       <Footer />
     </BrowserRouter>

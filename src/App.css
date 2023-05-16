@@ -12,5 +12,9 @@
 
 .album-title {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+.album-detail {
+  font-size: 12px;
 }
