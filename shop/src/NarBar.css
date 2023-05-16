@@ -1,0 +1,6 @@
+.container {
+    max-width: 100%;
+  }
+  .navbar {
+    --bs-navbar-padding-x: 5rem;
+  }
