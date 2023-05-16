@@ -19,7 +19,14 @@ const Albums = () => {
         {albums.map((album) => (
           <Col className="m-3" key={album.id}>
             <Row>
-              <Link to={`/${album.id}`}>
+              <Link
+                to={`/${album.id}`}
+                state={{
+                  title: album.title,
+                  detail: album.detail,
+                  img: album.img,
+                }}
+              >
                 <img
                   className="col-4"
                   style={{ width: "300px" }}
