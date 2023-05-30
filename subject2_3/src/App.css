@@ -1,0 +1,8 @@
+.main-bg {
+    background-image: url('./banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 550px; 
+    margin-top: 20px;
+    padding: 0;
+  }
