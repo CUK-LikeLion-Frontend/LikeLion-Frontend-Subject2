@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "../styles/Albums.css";
 import { AlbumData } from "./AlbumData";
+import "../styles/Albums.css";
 
 function Albums() {
   return (

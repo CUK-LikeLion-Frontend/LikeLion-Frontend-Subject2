@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Alert, Col, Container, Row } from "react-bootstrap";
 import { AlbumData } from "./AlbumData";
 import { useParams } from "react-router-dom";
+import "../styles/Albums.css";
 
 function AlbumDetailPage() {
   const { title } = useParams();
@@ -15,13 +16,17 @@ function AlbumDetailPage() {
   }, []);
 
   return (
-    <Container>
+    <Container className="mt-5">
       <Alert show={discount} variant="warning">
         3초 안에 구매하면 30프로 할인!!!
       </Alert>
       <Row>
-        <Col md>
-          <img src={albumData.img} alt={albumData.title}></img>
+        <Col>
+          <img
+            className="albums-img"
+            src={albumData.img}
+            alt={albumData.title}
+          ></img>
         </Col>
         <Col>
           <p className="album-title">{albumData.title}</p>
