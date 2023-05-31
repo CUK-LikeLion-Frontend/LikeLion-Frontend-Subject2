@@ -15,12 +15,3 @@
   align-items: stretch;
   flex-direction: column;
 }
-
-.albumImg {
-  width: 80%;
-}
-
-.albumTitle {
-  font-weight: bold;
-  font-size: 20px;
-}

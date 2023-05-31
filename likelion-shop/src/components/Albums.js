@@ -1,34 +1,26 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "../styles/App.css";
+import { Link } from "react-router-dom";
+import "../styles/Albums.css";
+import { AlbumData } from "./AlbumData";
 
 function Albums() {
   return (
     <Container>
       <Row>
-        <Col md>
-          <img src="img/Lilac.jpg" className="albumImg" alt="lilac-img"></img>
-          <div className="albumTitle">Lilac</div>
-          <div className="albumCaption">The 5th Mini Album</div>
-        </Col>
-        <Col md>
-          <img
-            src="img/LovePoem.jpg"
-            className="albumImg"
-            alt="lovepoem-img"
-          ></img>
-          <div className="albumTitle">Love Poem</div>
-          <div className="albumCaption">The 5th Album</div>
-        </Col>
-        <Col md>
-          <img
-            src="img/Palette.jpg"
-            className="albumImg"
-            alt="palette-img"
-          ></img>
-          <div className="albumTitle">Palette</div>
-          <div className="albumCaption">The 4th Album</div>
-        </Col>
+        {AlbumData.map((AlbumData) => (
+          <Col className="m-3">
+            <Link to={`/detail/${AlbumData.title}`}>
+              <img
+                className="albums-img"
+                src={AlbumData.img}
+                alt={AlbumData.title}
+              />
+            </Link>
+            <p className="album-title">{AlbumData.title}</p>
+            <p className="album-caption">{AlbumData.caption}</p>
+          </Col>
+        ))}
       </Row>
     </Container>
   );
