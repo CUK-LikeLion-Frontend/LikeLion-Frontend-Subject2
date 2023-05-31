@@ -1,11 +1,11 @@
 import React from 'react';
-import "./index.css";
+import './App.css';
 
-const Main = (props) => {
+function Main() {
 	return (
 		<>  
-        <div className='main-bg' />
- 
+             <img className="Main-bg" alt="banner" 
+             src="img/banner.jpg" />				
         </>
     );
 };
