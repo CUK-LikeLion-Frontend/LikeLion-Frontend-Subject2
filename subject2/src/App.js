@@ -4,6 +4,7 @@ import Home from './Home';
 import Nav from './Navigation';
 import Footer from './footer';
 import Albums from './Albums';
+import Detail from './Detail';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/albums" element={<Albums/>}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/detail/:name" element={<Detail/>}></Route>
         </Routes>
         <Footer />                
       </BrowserRouter>
