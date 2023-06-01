@@ -1,6 +1,7 @@
 import { useLocation, useParams } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Alert } from "react-bootstrap";
 import "../App.css";
+import { useEffect, useState } from "react";
 
 const Detail = () => {
   const { id } = useParams();
@@ -9,8 +10,17 @@ const Detail = () => {
   const title = location.state.title;
   const details = location.state.detail;
 
+  const [alert, setAlert] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAlert(false);
+    }, 3000);
+  }, []);
+
   return (
     <Container className="p-5">
+      <Alert variant="warning">3초 안에 구매하면 30프로 할인!!!</Alert>
       <Row>
         <Col>
           <img
@@ -25,7 +35,7 @@ const Detail = () => {
             <div className="album-title">{title}</div>
             <div className="album-detail">{details}</div>
           </p>
-          <p>20,000원</p>
+          <p>{alert ? "14,000원" : "20,000원"}</p>
           <button className="orderBtn">주문하기</button>
         </Col>
       </Row>
