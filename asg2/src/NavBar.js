@@ -11,7 +11,7 @@ function NavBar() {
         <Container>
           <Navbar.Brand href="/">멋사shop</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/">Albums</Nav.Link>
+          <Nav.Link href="/albums">Albums</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
