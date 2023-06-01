@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { Lilac, LovePoem, Palette } from './image'
+import { Lilac, LovePoem, Palette } from './img/index'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Albums.css'
 import { Link } from "react-router-dom";
@@ -12,18 +12,18 @@ function Albums() {
   ];
   return (
     <Container className="albums p-5">
-      <Row className="album-row">
+      <Row>
         {albumList.map(album =>
           <Col className="m-3" key={album.id}>
             <Row>
-              <div>
+              <div className="col-4">
                 <Link to={`/detail/${album.id}`}
                   state={{
                     subtitle: album.subtitle,
                     img: album.title
                   }}
                 >
-                  <img className="albums-img" src={album.title} alt={album.id} />
+                  <img style={{ maxWidth: 300 }} src={album.title} alt={album.id} />
                 </Link>
                 <p className="album-title">{album.id}</p>
                 <p className="album-subtitle">{album.subtitle}</p>
