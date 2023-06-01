@@ -6,15 +6,13 @@ import { useEffect, useState } from "react";
 
 function Detail() {
   const { id } = useParams();
-  const location = useLocation();
+  const { state } = useLocation();
   const [visible, setVisible] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setVisible(false)
     }, 3000);
   }, []);
-  const subtitle = location.state.subtitle;
-  const img = location.state.img;
   return (
     <Container className="albums p-5">
       <Alert show={visible} variant="warning">
@@ -22,11 +20,11 @@ function Detail() {
       </Alert>
       <Row>
         <Col>
-          <img className="album-img" src={process.env.PUBLIC_URL + img} alt={id} />
+          <img className="album-img" src={process.env.PUBLIC_URL + state?.img} alt={id} />
         </Col>
         <Col className="mt-5">
           <p className="album-title">{id}</p>
-          <p className="album-subtitle">{subtitle}</p>
+          <p className="album-subtitle">{state?.subtitle}</p>
           <p className="album-subtitle">{visible ? "14,000원" : "20,000원"}</p>
           <button className="order-btn">주문하기</button>
         </Col>
