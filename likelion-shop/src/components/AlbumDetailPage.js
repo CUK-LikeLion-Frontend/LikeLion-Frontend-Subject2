@@ -28,7 +28,7 @@ function AlbumDetailPage() {
             alt={albumData.title}
           ></img>
         </Col>
-        <Col>
+        <Col className="album-info">
           <p className="album-title">{albumData.title}</p>
           <p className="album-caption">{albumData.caption}</p>
           <p>{discount ? albumData.price * 0.7 : albumData.price}원</p>
