@@ -1,0 +1,28 @@
+.main-box {
+  text-align: center;
+}
+
+.main-bg {
+  content: url("../public/img/banner.jpg");
+  width: 80%;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.album-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.album-detail {
+  font-size: 15px;
+}
+
+.orderBtn {
+  background-color: rgb(39, 39, 254);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+}
